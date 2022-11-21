@@ -2,7 +2,7 @@
 All android lab code gathered in one project.
 
 ## How to run
-* Download the zip file from this [link](https://github.com/ICT-CoU/android-lab-code.git)
+* Download the zip file from this [link](https://github.com/ICT-CoU/android-lab-code/archive/refs/heads/main.zip)
 * Extract the zip file
 * Run this file on android studio
 * Wait some time for gradle build
