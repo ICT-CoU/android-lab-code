@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Picker">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <LinearLayout
+               android:id="@+id/l1"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="center">
+               <TextView
+                   android:id="@+id/h1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/datePicker"
+                   android:textAlignment="center"
+                   android:text="Choose Time"
+                   android:textSize="30sp"/>
+               <DatePicker
+                   android:id="@+id/datePicker"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="10dp" />
+
+               <TextView
+                   android:id="@+id/textView1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/datePicker"
+                   android:textAlignment="center"
+                   android:text="" />
+
+               <Button
+                   android:id="@+id/button1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/textView1"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="20dp"
+                   android:text="Change Date" />
+           </LinearLayout>
+
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:layout_below="@+id/l1"
+               android:layout_marginTop="30dp"
+               android:gravity="center">
+               <TextView
+                   android:id="@+id/h2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/datePicker"
+                   android:textAlignment="center"
+                   android:text="Choose Date"
+                   android:textSize="30sp"/>
+               <TimePicker
+                   android:id="@+id/timepicker"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/button1"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="10dp"
+                   />
+
+               <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/timepicker"
+                   android:textAlignment="center"
+                   android:text="" />
+
+               <Button
+                   android:id="@+id/button2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/textView2"
+                   android:layout_alignParentBottom="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginBottom="20dp"
+                   android:text="Change Time" />
+           </LinearLayout>
+
+       </RelativeLayout>
+   </ScrollView>
+</RelativeLayout>
