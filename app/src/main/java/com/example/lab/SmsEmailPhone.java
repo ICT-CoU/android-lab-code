@@ -40,17 +40,17 @@ public class SmsEmailPhone extends AppCompatActivity {
             public void onClick(View view) {
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if(checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
-//                        try {
-//
-////            Toast.makeText(getApplicationContext(), "Message Sent successfully!",
-////                    Toast.LENGTH_LONG).show();
-//                        } catch (Exception e) {
-//                            e.printStackTrace();
-//                            Toast.makeText(getApplicationContext(), "Message sending failed!",
-//                                    Toast.LENGTH_LONG).show();
-//                        }
+                        try {
                         SmsManager sms=SmsManager.getDefault();
                         sms.sendTextMessage(smsNo.getText().toString(), null, smsBody.getText().toString(), null,null);
+                        Toast.makeText(getApplicationContext(), "Message Sent successfully!",
+                                Toast.LENGTH_LONG).show();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Message sending failed!",
+                                    Toast.LENGTH_LONG).show();
+                        }
+
                     } else {
                         requestPermissions(new String[]{Manifest.permission.SEND_SMS}, 1);
                     }
